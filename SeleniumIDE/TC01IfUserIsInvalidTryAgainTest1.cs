@@ -21,7 +21,8 @@ public class TC01IfUserIsInvalidTryAgainTest
     [SetUp]
     public void SetUp()
     {
-        driver = new ChromeDriver();
+        var options = new ChromeOptions();
+        driver = new ChromeDriver(@"C:\\DRIVERS\\chromedriver-win64", options);
         js = (IJavaScriptExecutor)driver;
         vars = new Dictionary<string, object>();
     }
